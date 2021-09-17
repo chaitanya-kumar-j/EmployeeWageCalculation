@@ -6,9 +6,9 @@ namespace EmployeeWage
     {
         static void Main(string[] args)
         {
-            // Calculate Employee Daily Wage
-            int dailyWage = new Employee().DailyWage();
-            Console.WriteLine($"Daily Wage of Employee is: {dailyWage}");
+            // Calculate Employee Monthly Wage
+            int monthlyWage = new Employee().MonthlyWage();
+            Console.WriteLine($"Monthly Wage of Employee is: {monthlyWage}");
         }
     }
 }
