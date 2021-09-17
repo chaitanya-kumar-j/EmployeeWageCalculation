@@ -6,8 +6,9 @@ namespace EmployeeWage
     {
         static void Main(string[] args)
         {
-            // Check Employee Attendance
-            new Employee().Attendance();
+            // Calculate Employee Daily Wage
+            int dailyWage = new Employee().DailyWage();
+            Console.WriteLine($"Daily Wage of Employee is: {dailyWage}");
         }
     }
 }
