@@ -6,7 +6,8 @@ namespace EmployeeWage
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Check Employee Attendance
+            new Employee().Attendance();
         }
     }
 }
