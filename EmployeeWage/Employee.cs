@@ -16,10 +16,15 @@ namespace EmployeeWage
             Random random = new Random();
             int empCheck = random.Next(3);
             // Check employee attendance and calculate total working hours of employee
-            if (empCheck == IS_FULL_TIME)
-                empHours += FULL_DAY_HRS;
-            if (empCheck == IS_PART_TIME)
-                empHours += PART_TIME_HRS;
+            switch (empCheck)
+            {
+                case IS_FULL_TIME: empHours += FULL_DAY_HRS;
+                    break;
+                case IS_PART_TIME: empHours += PART_TIME_HRS;
+                    break;
+                default:
+                    break;
+            }
             // Calculate the wages
             int dailyWage = empHours * WAGE_PER_HR;
             return dailyWage;
