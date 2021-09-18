@@ -23,16 +23,14 @@ namespace EmployeeWage
                 switch (empCheck)
                 {
                     case IS_FULL_TIME:
-                        if (empHours > 92)
-                            empHours = 100;
-                        else
-                            empHours += FULL_DAY_HRS;
+                        empHours += FULL_DAY_HRS;
+                        if (empHours>MAX_WORKING_HRS)
+                            empHours -= FULL_DAY_HRS;
                         break;
                     case IS_PART_TIME:
-                        if (empHours > 96)
-                            empHours = 100;
-                        else
-                            empHours += PART_TIME_HRS;
+                        empHours += PART_TIME_HRS;
+                        if (empHours>MAX_WORKING_HRS)
+                            empHours -= PART_TIME_HRS;
                         break;
                     default:
                         break;
