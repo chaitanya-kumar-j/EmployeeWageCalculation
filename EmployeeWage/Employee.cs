@@ -15,7 +15,7 @@ namespace EmployeeWage
             // Create random number generator
             Random random = new Random();
             // Calculate Total hours worked in a month
-            while ( workingDays <= MAX_WORKING_DAYS &  empHours<100)
+            while ( workingDays <= MAX_WORKING_DAYS &  empHours< MAX_WORKING_HRS)
             {
                 workingDays++;
                 int empCheck = random.Next(3);
@@ -42,5 +42,16 @@ namespace EmployeeWage
             int monthlyWage = empHours * WAGE_PER_HR;
             return monthlyWage;
         }
+        // company list
+        string[] companyList = new string[] { "Company1", "Company2", "Company3" };
+        public void CompanyWage()
+        {
+            foreach (string company in companyList)
+            {
+                int monthlyWage = new Employee().MonthlyWage();
+                Console.WriteLine($"Employee wage of {company} is {monthlyWage}");
+            }
+        }
+        
     }
 }
